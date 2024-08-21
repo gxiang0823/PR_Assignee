@@ -13,4 +13,5 @@
 - 代码在原始功能上新增了统计Assignee的信息的功能(包括姓名)，随着使用，数据积累会越来越完善。
 - 新增了选择PBU的功能，不仅仅可以获取到CAM组的PR信息，别的group也可以使用。
 - 在Fixed Plane Additive PRs for Sagar这一分组中有不正确情况，已修复。
+- 其中属于vanterve的Dev但不是Fixed Plane Additive PRs功能的在txt文件中他们的Call_ID还加上了*号
 
