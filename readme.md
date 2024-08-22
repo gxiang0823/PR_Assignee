@@ -14,4 +14,5 @@
 - 新增了选择PBU的功能，不仅仅可以获取到CAM组的PR信息，别的group也可以使用。
 - 在Fixed Plane Additive PRs for Sagar这一分组中有不正确情况，已修复。
 - 其中属于vanterve的Dev但不是Fixed Plane Additive PRs功能的在txt文件中他们的Call_ID还加上了*号
-
+- 增强了代码的可读性，精简代码便于后续增加额外功能
+- 如果需要所有的PR信息，可以打开Post_Request函数中的download注释，即可将所有PR信息下载为json文件
