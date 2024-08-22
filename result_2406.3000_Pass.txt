@@ -1,0 +1,52 @@
+Leader_ID:   buerer
+ Call_ID Call_Type Assignee_ID Supervisor_ID
+11050792        PR      4urhkm      vanderko
+12025519        PR     x_thite         dietz
+12025524        PR     x_thite         dietz
+12025530        PR     x_thite         dietz
+12025824        PR    brenneck         dietz
+12027039        PR    brenneck         dietz
+PR Num: 6    ER Num: 0    total assignee: 3
+
+
+Leader_ID:   dlettis
+ Call_ID Call_Type Assignee_ID Supervisor_ID
+10950279        PR    popmamic      vanderko
+11025135        ER        lili      palbhi29
+11048361        PR    popmamic      vanderko
+11059626        PR    siddua0w        xiaxin
+11061364        PR     wilmsen      vanderko
+11063771        PR      ptrq9g        xiaxin
+11071220        PR      cffg7c        xiaxin
+11072083        PR      cffg7c        xiaxin
+11079202        PR      zhangr        xiaxin
+12022263        PR      yd5dho      palbhi29
+12022956        PR      yd5dho      palbhi29
+12022977        PR      on6xyk      vanderko
+PR Num: 11    ER Num: 1    total assignee: 9
+
+
+Leader_ID:   vanterve
+  Call_ID Call_Type Assignee_ID Supervisor_ID
+ 10998185        PR      r8vhdk      balkenen
+ 11061013        PR    balkenen      vanterve
+ 11062175        PR      wrpv2r      balkenen
+*11069481        PR      mhus6k       fithian
+ 11071195        PR      9pbvm9      balkenen
+*11072217        PR      mhus6k       fithian
+ 11076749        PR      9pbvm9      balkenen
+ 11081990        PR      vd2oek      balkenen
+*12028514        PR      mhus6k       fithian
+PR Num: 9    ER Num: 0    total assignee: 6
+
+
+Assignee ID: [else] -> CMM PR for Jeff Moffatt [4urhkm]
+
+Assignee ID: [else] -> Managed mode CAM PRs for Ravneet Singh [x_thite, brenneck]
+
+Assignee ID: [all] -> Fixed Plane Additive PRs for Sagar [r8vhdk, balkenen, wrpv2r, 9pbvm9, vd2oek]
+
+Assignee ID: [other] -> Multi Axis Additive PRs for Sagar [mhus6k]
+
+Assignee ID: [other] -> [popmamic, lili, siddua0w, wilmsen, ptrq9g, cffg7c, zhangr, yd5dho, on6xyk]
+

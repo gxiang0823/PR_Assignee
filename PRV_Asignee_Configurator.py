@@ -162,15 +162,15 @@ def Data_Process(post_data_json, release, validation):
             print("\n")
 
         # Classification of assignee information
-        assignee_buerer = Final_Result[(Final_Result['Leader_ID'] == 'buerer') & (Final_Result['Assignee_ID'] != 'hwangb')]['Assignee_ID'].unique()
+        assignee_buerer = Final_Result[(Final_Result['Leader_ID'] == 'buerer') & (Final_Result['Assignee_ID'] != 'hwangb') & (Final_Result['Assignee_ID'] != 'brenneck') & (Final_Result['Assignee_ID'] != 'x_thite')]['Assignee_ID'].unique()
         if assignee_buerer.size != 0:
             output_buerer = ", ".join(assignee_buerer)
             print(f"Assignee ID: [else] -> CMM PR for Jeff Moffatt [{output_buerer}]\n")
 
-        assignee_hwangb = Final_Result[(Final_Result['Leader_ID'] == 'buerer') & (Final_Result['Assignee_ID'] == 'hwangb')]['Assignee_ID'].unique()
+        assignee_hwangb = Final_Result[(Final_Result['Assignee_ID'] == 'hwangb') | (Final_Result['Assignee_ID'] == 'brenneck') | (Final_Result['Assignee_ID'] == 'x_thite')]['Assignee_ID'].unique()
         if assignee_hwangb.size != 0:
             output_hwangb = ", ".join(assignee_hwangb)
-            print(f"Assignee ID: [hwangb] -> Managed mode CAM PRs for Ravneet [{output_hwangb}]\n")
+            print(f"Assignee ID: [else] -> Managed mode CAM PRs for Ravneet Singh [{output_hwangb}]\n")
 
         assignee_vanterve = Final_Result[(Final_Result['Leader_ID'] == 'vanterve') & (Final_Result['application'] == 'ADD_FIXED_PLANE')]['Assignee_ID'].unique()
         if assignee_vanterve.size != 0:
@@ -178,8 +178,12 @@ def Data_Process(post_data_json, release, validation):
             print(f"Assignee ID: [all] -> Fixed Plane Additive PRs for Sagar [{output_vanterve}]\n")
 
         assignee_vanterve_remain = Final_Result[(Final_Result['Leader_ID'] == 'vanterve') & (Final_Result['application'] != 'ADD_FIXED_PLANE')]['Assignee_ID'].unique()
-        assignee_paradise_in = Final_Result[(Final_Result['Leader_ID'] == 'paradise')]['Assignee_ID'].unique()
-        assignee_paradise = pd.Series(pd.concat([pd.Series(assignee_paradise_in), pd.Series(assignee_vanterve_remain)]).unique())
+        if assignee_vanterve_remain.size != 0:
+            output_vanterve_remain = ", ".join(assignee_vanterve_remain)
+            print(f"Assignee ID: [other] -> Multi Axis Additive PRs for Sagar [{output_vanterve_remain}]\n")
+
+        assignee_paradise = Final_Result[(Final_Result['Leader_ID'] == 'paradise')]['Assignee_ID'].unique()
+        # assignee_paradise = pd.Series(pd.concat([pd.Series(assignee_paradise_in), pd.Series(assignee_vanterve_remain)]).unique())
         if assignee_paradise.size != 0:
             output_paradise = ", ".join(assignee_paradise)
             print(f"Assignee ID: [all] -> CAM Machining PRs for Eric and the interns [{output_paradise}]\n")
@@ -196,21 +200,21 @@ def Data_Process(post_data_json, release, validation):
 
 if __name__ == '__main__':
     # Input Release and Cookies
-    print("****************************************************************")
-    release = input("* Enter Release: ")
-    pbu = input("* PBU: ")
-    print("* Pass/Fail/Needs Validation/Unable to Verify/Partial Fix/None *")
-    validation = input("* Enter Validation status: ")
-    print("* Current JSESSIONID can be found in Nexus website's Cookies.  *")
-    print("* Please Manually copy the JSESSIONID into the console.        *")
-    cookie = input("* Enter your cookie: ")
-    print("****************************************************************")
+    # print("****************************************************************")
+    # release = input("* Enter Release: ")
+    # pbu = input("* PBU: ")
+    # print("* Pass/Fail/Needs Validation/Unable to Verify/Partial Fix/None *")
+    # validation = input("* Enter Validation status: ")
+    # print("* Current JSESSIONID can be found in Nexus website's Cookies.  *")
+    # print("* Please Manually copy the JSESSIONID into the console.        *")
+    # cookie = input("* Enter your cookie: ")
+    # print("****************************************************************")
 
     # test code
-    # release = "2406.4000"
-    # pbu = "cam"
-    # validation = "Pass"
-    # cookie = "JSESSIONID=58FA71E2436CDA2F0AA9D44639158BCA"
+    release = "2406.3000"
+    pbu = "cam"
+    validation = "Pass"
+    cookie = "JSESSIONID=58FA71E2436CDA2F0AA9D44639158BCA"
     # Get Call ID set
     Call_ID_Set = Get_Request(release, pbu, validation, cookie)
     # Check Call ID set
