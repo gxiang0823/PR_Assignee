@@ -68,7 +68,7 @@ def Post_Request(Call_ID_Set, cookie):
     post_data_json = json.loads(post_content)
 
     # Down Load PR information
-    down_load(post_data_json)
+    # down_load(post_data_json)
 
     return post_data_json
 
