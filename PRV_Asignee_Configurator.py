@@ -68,7 +68,7 @@ def Post_Request(Call_ID_Set, cookie):
     post_data_json = json.loads(post_content)
 
     # Down Load PR information
-    # down_load(post_data_json)
+    down_load(post_data_json)
 
     return post_data_json
 
@@ -210,7 +210,7 @@ if __name__ == '__main__':
     # release = "2406.4000"
     # pbu = "cam"
     # validation = "Pass"
-    # cookie = "JSESSIONID=7A3C039FD5F28CAF83101C5DEA875CD6"
+    # cookie = "JSESSIONID=58FA71E2436CDA2F0AA9D44639158BCA"
     # Get Call ID set
     Call_ID_Set = Get_Request(release, pbu, validation, cookie)
     # Check Call ID set
