@@ -72,23 +72,6 @@ def Post_Request(Call_ID_Set, cookie):
 
     return post_data_json
 
-
-def Get_Leader_Info(leader, item):
-    Assignee_Info = item['Assignee_ID'].unique()
-    if leader == 'buerer':
-        output_info = ", ".join(Assignee_Info)
-        print(f"Assignee ID: [else]\t-> CMM PR for Jeff Moffatt [{output_info}]\n")
-    elif leader == 'vanterve':
-        output_info = ", ".join(Assignee_Info)
-        print(f"Assignee ID: [all]\t-> Fixed Plane Additive PRs for Sagar [{output_info}]\n")
-    elif leader == 'paradise':
-        output_info = ", ".join(Assignee_Info)
-        print(f"Assignee ID: [all]\t-> CAM Machining PRs for Eric and the interns [{output_info}]\n")
-    else:
-        output_info = ", ".join(Assignee_Info)
-        print(f"Assignee ID: [other]-> [{output_info}]\n")
-
-
 def Check_data(Call_ID_Set):
     if not Call_ID_Set:
         print("*************************************************************")
@@ -179,23 +162,32 @@ def Data_Process(post_data_json, release, validation):
             print("\n")
 
         # Classification of assignee information
-        assignee_buerer = Final_Result[(Final_Result['Leader_ID'] == 'buerer')]['Assignee_ID'].unique()
-        output_buerer = ", ".join(assignee_buerer)
-        print(f"Assignee ID: [else]\t-> CMM PR for Jeff Moffatt [{output_buerer}]\n")
+        assignee_buerer = Final_Result[(Final_Result['Leader_ID'] == 'buerer') & (Final_Result['Assignee_ID'] != 'hwangb')]['Assignee_ID'].unique()
+        if assignee_buerer.size != 0:
+            output_buerer = ", ".join(assignee_buerer)
+            print(f"Assignee ID: [else] -> CMM PR for Jeff Moffatt [{output_buerer}]\n")
+
+        assignee_hwangb = Final_Result[(Final_Result['Leader_ID'] == 'buerer') & (Final_Result['Assignee_ID'] == 'hwangb')]['Assignee_ID'].unique()
+        if assignee_hwangb.size != 0:
+            output_hwangb = ", ".join(assignee_hwangb)
+            print(f"Assignee ID: [hwangb] -> Managed mode CAM PRs for Ravneet [{output_hwangb}]\n")
 
         assignee_vanterve = Final_Result[(Final_Result['Leader_ID'] == 'vanterve') & (Final_Result['application'] == 'ADD_FIXED_PLANE')]['Assignee_ID'].unique()
-        output_vanterve = ", ".join(assignee_vanterve)
-        print(f"Assignee ID: [all]\t-> Fixed Plane Additive PRs for Sagar [{output_vanterve}]\n")
+        if assignee_vanterve.size != 0:
+            output_vanterve = ", ".join(assignee_vanterve)
+            print(f"Assignee ID: [all] -> Fixed Plane Additive PRs for Sagar [{output_vanterve}]\n")
 
         assignee_vanterve_remain = Final_Result[(Final_Result['Leader_ID'] == 'vanterve') & (Final_Result['application'] != 'ADD_FIXED_PLANE')]['Assignee_ID'].unique()
         assignee_paradise_in = Final_Result[(Final_Result['Leader_ID'] == 'paradise')]['Assignee_ID'].unique()
         assignee_paradise = pd.Series(pd.concat([pd.Series(assignee_paradise_in), pd.Series(assignee_vanterve_remain)]).unique())
-        output_paradise = ", ".join(assignee_paradise)
-        print(f"Assignee ID: [all]\t-> CAM Machining PRs for Eric and the interns [{output_paradise}]\n")
+        if assignee_paradise.size != 0:
+            output_paradise = ", ".join(assignee_paradise)
+            print(f"Assignee ID: [all] -> CAM Machining PRs for Eric and the interns [{output_paradise}]\n")
 
         assignee_else = Final_Result[(Final_Result['Leader_ID'] != 'buerer') & (Final_Result['Leader_ID'] != 'vanterve') & (Final_Result['Leader_ID'] != 'paradise')]['Assignee_ID'].unique()
-        output_else = ", ".join(assignee_else)
-        print(f"Assignee ID: [other]-> [{output_else}]\n")
+        if assignee_else.size != 0:
+            output_else = ", ".join(assignee_else)
+            print(f"Assignee ID: [other] -> [{output_else}]\n")
 
 
 
@@ -227,3 +219,8 @@ if __name__ == '__main__':
     post_data_json = Post_Request(Call_ID_Set, cookie)
     # Process the information & output
     Data_Process(post_data_json, release, validation)
+
+    print("\n")
+    print("****************************************************************")
+    print("* The results are recorded in .txt file in the current folder  *")
+    print("****************************************************************")
