@@ -184,11 +184,17 @@ def Data_Process(post_data_json, release, validation):
 
         assignee_paradise = Final_Result[(Final_Result['Leader_ID'] == 'paradise')]['Assignee_ID'].unique()
         # assignee_paradise = pd.Series(pd.concat([pd.Series(assignee_paradise_in), pd.Series(assignee_vanterve_remain)]).unique())
-        if assignee_paradise.size != 0:
-            output_paradise = ", ".join(assignee_paradise)
-            print(f"Assignee ID: [all] -> CAM Machining PRs for Eric and the interns [{output_paradise}]\n")
+        # if assignee_paradise.size != 0:
+        #     output_paradise = ", ".join(assignee_paradise)
+        #     print(f"Assignee ID: [all] -> CAM Machining PRs for Eric and the interns [{output_paradise}]\n")
 
-        assignee_else = Final_Result[(Final_Result['Leader_ID'] != 'buerer') & (Final_Result['Leader_ID'] != 'vanterve') & (Final_Result['Leader_ID'] != 'paradise')]['Assignee_ID'].unique()
+        assignee_dlettis = Final_Result[(Final_Result['Leader_ID'] == 'dlettis')]['Assignee_ID'].unique()
+        assignee_Eric = pd.Series(pd.concat([pd.Series(assignee_paradise), pd.Series(assignee_dlettis)]).unique())
+        if assignee_Eric.size != 0:
+            output_Eric = ", ".join(assignee_Eric)
+            print(f"Assignee ID: [all] -> CAM Machining PRs for Eric and the interns [{output_Eric}]\n")
+
+        assignee_else = Final_Result[(Final_Result['Leader_ID'] != 'buerer') & (Final_Result['Leader_ID'] != 'vanterve') & (Final_Result['Leader_ID'] != 'paradise') & (Final_Result['Leader_ID'] != 'dlettis')]['Assignee_ID'].unique()
         if assignee_else.size != 0:
             output_else = ", ".join(assignee_else)
             print(f"Assignee ID: [other] -> [{output_else}]\n")
@@ -214,7 +220,7 @@ if __name__ == '__main__':
     release = "2406.3000"
     pbu = "cam"
     validation = "Pass"
-    cookie = "JSESSIONID=58FA71E2436CDA2F0AA9D44639158BCA"
+    cookie = "JSESSIONID=3E9570952D8C9D336CA206F14B1984D4"
     # Get Call ID set
     Call_ID_Set = Get_Request(release, pbu, validation, cookie)
     # Check Call ID set

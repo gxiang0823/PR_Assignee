@@ -36,8 +36,8 @@ Leader_ID:   vanterve
 *11072217        PR      mhus6k       fithian
  11076749        PR      9pbvm9      balkenen
  11081990        PR      vd2oek      balkenen
-*12028514        PR      mhus6k       fithian
-PR Num: 9    ER Num: 0    total assignee: 6
+*12028514        PR      xahha9       fithian
+PR Num: 9    ER Num: 0    total assignee: 7
 
 
 Assignee ID: [else] -> CMM PR for Jeff Moffatt [4urhkm]
@@ -46,7 +46,7 @@ Assignee ID: [else] -> Managed mode CAM PRs for Ravneet Singh [x_thite, brenneck
 
 Assignee ID: [all] -> Fixed Plane Additive PRs for Sagar [r8vhdk, balkenen, wrpv2r, 9pbvm9, vd2oek]
 
-Assignee ID: [other] -> Multi Axis Additive PRs for Sagar [mhus6k]
+Assignee ID: [other] -> Multi Axis Additive PRs for Sagar [mhus6k, xahha9]
 
-Assignee ID: [other] -> [popmamic, lili, siddua0w, wilmsen, ptrq9g, cffg7c, zhangr, yd5dho, on6xyk]
+Assignee ID: [all] -> CAM Machining PRs for Eric and the interns [popmamic, lili, siddua0w, wilmsen, ptrq9g, cffg7c, zhangr, yd5dho, on6xyk]
 

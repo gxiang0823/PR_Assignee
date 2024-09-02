@@ -1,0 +1,24 @@
+Leader_ID:   dlettis
+ Call_ID Call_Type Assignee_ID Supervisor_ID
+10729820        PR      qwceu9      vanderko
+10842735        PR    grabowsk      vanderko
+11066775        PR       hayes       mistrys
+11083044        PR    sujwan5k        xiaxin
+11098319        PR        sing       mistrys
+11101271        PR    x_penkov      vanderko
+11108155        PR       krach      vanderko
+12028859        PR      qwceu9      vanderko
+12029207        PR      qwceu9      vanderko
+12029212        PR      qwceu9      vanderko
+12029233        PR      qwceu9      vanderko
+PR Num: 11    ER Num: 0    total assignee: 7
+
+
+Leader_ID:   paradise
+ Call_ID Call_Type Assignee_ID Supervisor_ID
+10092705        PR       kaltz      vanderko
+PR Num: 1    ER Num: 0    total assignee: 1
+
+
+Assignee ID: [all] -> CAM Machining PRs for Eric and the interns [kaltz, qwceu9, grabowsk, hayes, sujwan5k, sing, x_penkov, krach]
+
