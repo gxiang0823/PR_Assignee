@@ -206,21 +206,21 @@ def Data_Process(post_data_json, release, validation):
 
 if __name__ == '__main__':
     # Input Release and Cookies
-    # print("****************************************************************")
-    # release = input("* Enter Release: ")
-    # pbu = input("* PBU: ")
-    # print("* Pass/Fail/Needs Validation/Unable to Verify/Partial Fix/None *")
-    # validation = input("* Enter Validation status: ")
-    # print("* Current JSESSIONID can be found in Nexus website's Cookies.  *")
-    # print("* Please Manually copy the JSESSIONID into the console.        *")
-    # cookie = input("* Enter your cookie: ")
-    # print("****************************************************************")
+    print("****************************************************************")
+    release = input("* Enter Release: ")
+    pbu = input("* PBU: ")
+    print("* Pass/Fail/Needs Validation/Unable to Verify/Partial Fix/None *")
+    validation = input("* Enter Validation status: ")
+    print("* Current JSESSIONID can be found in Nexus website's Cookies.  *")
+    print("* Please Manually copy the JSESSIONID into the console.        *")
+    cookie = input("* Enter your cookie: ")
+    print("****************************************************************")
 
     # test code
-    release = "2406.3000"
-    pbu = "cam"
-    validation = "Pass"
-    cookie = "JSESSIONID=3E9570952D8C9D336CA206F14B1984D4"
+    # release = "2406.3000"
+    # pbu = "cam"
+    # validation = "Pass"
+    # cookie = "JSESSIONID=3E9570952D8C9D336CA206F14B1984D4"
     # Get Call ID set
     Call_ID_Set = Get_Request(release, pbu, validation, cookie)
     # Check Call ID set
