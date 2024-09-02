@@ -213,7 +213,7 @@ if __name__ == '__main__':
     validation = input("* Enter Validation status: ")
     print("* Current JSESSIONID can be found in Nexus website's Cookies.  *")
     print("* Please Manually copy the JSESSIONID into the console.        *")
-    cookie = input("* Enter your cookie: ")
+    cookie ="JSESSIONID=" + input("* Enter your cookie: ")
     print("****************************************************************")
 
     # test code

@@ -45,13 +45,13 @@ Leader_ID:   vanterve
 PR Num: 8    ER Num: 0    total assignee: 4
 
 
-Assignee ID: [else] -> CMM PR for Jeff Moffatt [4urhkm, 5ucusr, brenneck]
+Assignee ID: [else] -> CMM PR for Jeff Moffatt [4urhkm, 5ucusr]
 
-Assignee ID: [hwangb] -> Managed mode CAM PRs for Ravneet [hwangb]
+Assignee ID: [else] -> Managed mode CAM PRs for Ravneet Singh [hwangb, brenneck]
 
 Assignee ID: [all] -> Fixed Plane Additive PRs for Sagar [9pbvm9, wrpv2r, phxcf8, ex0xus]
 
-Assignee ID: [all] -> CAM Machining PRs for Eric and the interns [9pbvm9]
+Assignee ID: [other] -> Multi Axis Additive PRs for Sagar [9pbvm9]
 
-Assignee ID: [other] -> [a9zpeb, popmamic, srinath, on6xyk, xoo8zx]
+Assignee ID: [all] -> CAM Machining PRs for Eric and the interns [a9zpeb, popmamic, srinath, on6xyk, xoo8zx]
 
