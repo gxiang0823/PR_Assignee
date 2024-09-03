@@ -1,0 +1,52 @@
+Leader_ID:   buerer
+ Call_ID Call_Type Assignee_ID Supervisor_ID
+10893260        PR      4urhkm      vanderko
+11089030        PR      5ucusr        6u5dtv
+11089036        PR      5ucusr        6u5dtv
+11089050        PR      5ucusr        6u5dtv
+PR Num: 4    ER Num: 0    total assignee: 2
+
+
+Leader_ID:   dlettis
+ Call_ID Call_Type Assignee_ID Supervisor_ID
+10729820        PR      qwceu9      vanderko
+10842735        PR    grabowsk      vanderko
+11066775        PR       hayes       mistrys
+11067122        PR        sing       mistrys
+11069456        PR      ptrq9g        xiaxin
+11083044        PR    sujwan5k        xiaxin
+11096341        PR      wsnhk2        xiaxin
+11098319        PR        sing       mistrys
+11102525        PR    x_penkov      vanderko
+11111152        PR      cffg7c        xiaxin
+12028859        PR      qwceu9      vanderko
+12029207        PR      qwceu9      vanderko
+12029212        PR      qwceu9      vanderko
+12029233        PR      qwceu9      vanderko
+PR Num: 14    ER Num: 0    total assignee: 9
+
+
+Leader_ID:   paradise
+ Call_ID Call_Type Assignee_ID Supervisor_ID
+10092705        PR       kaltz      vanderko
+PR Num: 1    ER Num: 0    total assignee: 1
+
+
+Leader_ID:   vanterve
+ Call_ID Call_Type Assignee_ID Supervisor_ID
+11094304        PR      9pbvm9      balkenen
+11105035        PR      phxcf8      balkenen
+11106498        PR      phxcf8      balkenen
+11108245        PR      phxcf8      balkenen
+11111925        PR      phxcf8      balkenen
+11115967        PR      phxcf8      balkenen
+11116473        PR      phxcf8      balkenen
+PR Num: 7    ER Num: 0    total assignee: 2
+
+
+Assignee ID: [else] -> CMM PR for Jeff Moffatt [4urhkm, 5ucusr]
+
+Assignee ID: [all] -> Fixed Plane Additive PRs for Sagar [9pbvm9, phxcf8]
+
+Assignee ID: [all] -> CAM Machining PRs for Eric and the interns [kaltz, qwceu9, grabowsk, hayes, sing, ptrq9g, sujwan5k, wsnhk2, x_penkov, cffg7c]
+

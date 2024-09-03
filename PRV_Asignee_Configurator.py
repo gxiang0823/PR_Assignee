@@ -20,8 +20,12 @@ def down_load(data_json):
 
 def Get_Request(release, pbu, validation, cookie):
     get_url = 'https://nexus.net.plm.eds.com:7373/cp-validation?'
-    get_data = {
-        'search': 'release=="' + release + '";changePackage.pbu=="' + pbu + '";validation.status=="' + validation + '";flag=in=(C,F)'}
+    if validation.lower() == "none":
+        get_data = {
+            'search': 'release=="' + release + '";changePackage.pbu=="' + pbu + '";flag=in=(C,F)'}
+    else:
+        get_data = {
+            'search': 'release=="' + release + '";changePackage.pbu=="' + pbu + '";validation.status=="' + validation + '";flag=in=(C,F)'}
     get_data = urllib.parse.urlencode(get_data)
     G_url = get_url + get_data
     get_headers = {'Cookie': cookie}
@@ -208,7 +212,7 @@ if __name__ == '__main__':
     # Input Release and Cookies
     print("****************************************************************")
     release = input("* Enter Release: ")
-    pbu = input("* PBU: ")
+    pbu = "cam"
     print("* Pass/Fail/Needs Validation/Unable to Verify/Partial Fix/None *")
     validation = input("* Enter Validation status: ")
     print("* Current JSESSIONID can be found in Nexus website's Cookies.  *")

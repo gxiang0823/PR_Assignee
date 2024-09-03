@@ -1,0 +1,20 @@
+Leader_ID:   dlettis
+ Call_ID Call_Type Assignee_ID Supervisor_ID
+10734677        PR      chenyu       mistrys
+10785904        PR     wilmsen      vanderko
+10811839        PR     wilmsen      vanderko
+10819219        PR     wilmsen      vanderko
+10834155        PR       hayes       mistrys
+10853113        PR      xw4sew       mistrys
+10874843        PR    armbrust      vanderko
+10881054        PR     wilmsen      vanderko
+10882115        PR     wilmsen      vanderko
+10884056        PR     wilmsen      vanderko
+10897156        PR         yic       mistrys
+10904535        PR         yic       mistrys
+10910558        PR       hayes       mistrys
+PR Num: 13    ER Num: 0    total assignee: 6
+
+
+Assignee ID: [all] -> CAM Machining PRs for Eric and the interns [chenyu, wilmsen, hayes, xw4sew, armbrust, yic]
+
